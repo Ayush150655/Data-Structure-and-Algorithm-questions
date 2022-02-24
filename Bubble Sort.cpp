@@ -18,7 +18,7 @@ void bubbleSort(int *arr,int n)
     }
 }
 
-int main()
+int main() 
 {
     int arr[]={2,6,4,3,9,7,25,40,13};
     bubbleSort(arr,9);
