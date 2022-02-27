@@ -6,7 +6,7 @@ class Solution{
     private:
     bool isAllowed(int x, int y, int n, vector<vector<int>> visited, vector<vector<int>>& m)
     {
-        if((x>=0 && x<n-1)&&(y>=0 && y<n-1) && visited[x][y]==0 && m[x][y]==1)
+        if((x>=0 && x<n)&&(y>=0 && y<n) && visited[x][y]==0 && m[x][y]==1)
         {
             return true;
         }
