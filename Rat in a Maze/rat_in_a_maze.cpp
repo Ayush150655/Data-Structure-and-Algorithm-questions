@@ -111,7 +111,7 @@ int main() {
             cout << -1;
         else
             for (int i = 0; i < result.size(); i++) cout << result[i] << " ";
-        cout << endl;
+        cout << endl; 
     }
     return 0;
 }  
