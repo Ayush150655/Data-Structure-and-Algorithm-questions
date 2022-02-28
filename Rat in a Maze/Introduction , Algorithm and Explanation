@@ -1,0 +1,36 @@
+In this question we have been given a 2-D array with 0 or 1 as elements.
+A rat is sitting on source, that is, on (0,0) and we have to find all possible paths to reach the destination, that is, (n-1,n-1) (where, n= size of the vector).
+0 indicates rat can't move to that cell amd 1 indicates it can move.
+
+Rat can move in 4 directions: UP (denoted by 'U')
+                              DOWN (denoted by 'D')
+                              LEFT (denoted by 'L')
+                              RIGHT (denoted by 'R')
+                             
+Algorithm:
+1. Check if at (0,0) is 1 or 0 (if 1 then move further or else if 0 then return -1), because 0 is not allowed.
+2. Create a 2-D array of same size and name it as visited and initialize it with 0, it will tell whether we have visited that cell previously or not.
+   when we visit any particular cell then update visited array as 1.
+3. Create a string path, which stores the path of rat.
+4. Now pass given array, size, visited array, x, y, path to a function which will find all possible paths.
+5. Write the base  case - check whether x and y are inside array , if false then store the size in an ans array and return.
+6. In recursive question, we have to find one correct condition and rest the recursion will handle, therefore, 
+   Create newx and newy.
+   for UP move update - newx = x-1.
+                        newy = y.
+                        
+   for DOWN move update - newx = x+1.
+                          newy = y.
+                          
+   for RIGHT move update - newx = x.
+                           newy = y+1.
+                           
+   for LEFT move update - newx = x.
+                          newy = y-1.
+                          
+   check wheteher rat can move in these directions, to check this we have three conditions - 1. That cell should be inside the given array.
+                                                                                             2. That cell should not be visited, that is, visited[i][j] = 0.
+                                                                                             3. That cell is allowed for movement that is, m[i][j]=1.
+   recursively call in each directions and keep popping out the path, so that, in the next recursive call the path should be empty.
+7. Update visited[i][j] = 0, so that, when we are backtracking and finding the next path then it should not be shown visited.
+                  
